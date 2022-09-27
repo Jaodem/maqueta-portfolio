@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2cb1076079.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styless.css">
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg bg-secondary rounded">
+        <div class="container">
+            <i class="navbar-brand">
+                <a href="index.html"><img src="assets/img/APLogo.png" alt="AP Logo" width="25%" class=""></a>
+            </i>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://www.instagram.com/otsuguaesoj/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="https://www.facebook.com/profile.php?id=100065280665868" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                    <!-- Botón que abre Inicio de Sesión -->
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-user fa-2xl"></i></a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      
+    <!-- Modal Salir-->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">¡Ya está logeado!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-secondary">
+                    <h6 class="modal-salir">Usted está en modo administrador, si desea volver al inicio haga click en el botón <strong>"Salir"</strong>.</h6>
+                    <h6 class="modal-salir">Si desea seguir editando haga click en el botón <strong>"Cancelar"</strong></h6>
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+                    <a href="index.html"><button type="submit" class="btn btn-dark">Salir</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Modal Imagen Uno-->
+    <div class="modal fade" id="imagenUnoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Cambiar Primer Imágen</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="mb-3 mt-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Imagen Dos-->
+    <div class="modal fade" id="imagenDosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Cambiar Segunda Imágen</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="mb-3 mt-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Imagen Tres-->
+    <div class="modal fade" id="imagenTresModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Cambiar Tercer Imágen</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="mb-3 mt-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Perfil -->
+    <div class="modal fade" id="perfilModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Perfil</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Nombre</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Profesión</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Foto de Perfil</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Educación -->
+    <div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Educación</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Establecimiento</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Dirección</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de la Institución</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tecnica -->
+    <div class="modal fade" id="tecnicaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Técnica</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Establecimiento</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Dirección</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de la Institución</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="submit" class="btn btn-dark">Modificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Ies -->
+    <div class="modal fade" id="iesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Ies</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Establecimiento</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Dirección</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de la Institución</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="submit" class="btn btn-dark">Modificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Iesa -->
+    <div class="modal fade" id="iesaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Iesa</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Establecimiento</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Dirección</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de la Institución</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="submit" class="btn btn-dark">Modificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Unca -->
+    <div class="modal fade" id="uncaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Unca</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Establecimiento</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Dirección</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de la Institución</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="submit" class="btn btn-dark">Modificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Skills -->
+    <div class="modal fade" id="skillsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Skill</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Skill</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Porcentaje</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de Skill</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Linux -->
+    <div class="modal fade" id="linuxModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Linux</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Skill</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Porcentaje</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de Skill</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="submit" class="btn btn-dark">Modificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Html -->
+    <div class="modal fade" id="htmlModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Html</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Skill</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Porcentaje</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de Skill</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="submit" class="btn btn-dark">Modificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal CSS -->
+    <div class="modal fade" id="cssModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Css</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Skill</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Porcentaje</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de Skill</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="submit" class="btn btn-dark">Modificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal JavaScript -->
+    <div class="modal fade" id="jsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar JavaScript</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Skill</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Porcentaje</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de Skill</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="submit" class="btn btn-dark">Modificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Bootstrap -->
+    <div class="modal fade" id="bootstrapModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Bootstrap</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Skill</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Porcentaje</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo de Skill</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Eliminar</button>
+                    <button type="submit" class="btn btn-dark">Modificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Modal Acerca De Mí -->
+    <div class="modal fade" id="acercaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Acerca de Mí</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Título</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Texto</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Experiencia -->
+    <div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Experiencia</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Experiencia</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Referencia</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Modal Proyectos -->
+    <div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">Proyectos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Proyecto</label>
+                    <input class="form-control" type="text" id="formFile">
+                </div>
+
+                <div class="bg-secondary">
+                    <label for="formFile" class="form-label">Logo del Proyecto</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="modal-footer bg-secondary">
+                    <button type="submit" class="btn btn-dark">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Banner Carousel -->
+    <section class="banner rounded">        
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active text-center">
+                <img src="assets/img/imagen01.png" class="d-block w-100" alt="Imégen 1">
+                <i class="fa-solid fa-square-pen fa-2xl text-center" type="button" data-bs-toggle="modal" data-bs-target="#imagenUnoModal"></i>
+              </div>
+              <div class="carousel-item text-center">
+                <img src="assets/img/imagen02.png" class="d-block w-100" alt="Imágen 2">
+                <i class="fa-solid fa-square-pen fa-2xl text-center" type="button" data-bs-toggle="modal" data-bs-target="#imagenDosModal"></i>
+              </div>
+              <div class="carousel-item text-center">
+                <img src="assets/img/imagen03.png" class="d-block w-100" alt="Imágen 3">
+                <i class="fa-solid fa-square-pen fa-2xl text-center" type="button" data-bs-toggle="modal" data-bs-target="#imagenTresModal"></i>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+    </section>
+
+    <!-- Presentación -->
+    <section class="presentacion rounded ml-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-3" id="user">
+                    <!-- Foto y Datos de Perfil -->
+                    <img src="assets/img/perfil01.png" alt="Foto de Perfil" class="rounded-circle w-25"> <br> <br> <br> <br> <br>
+                    <h6 class="text-center">José Augusto Orellana</h6>
+                    <h6 class="text-center">Desarrollador Full Stack Jr</h6>
+                    <i class="fa-solid fa-square-pen fa-2xl text-center" id="editar-perfil" type="button" data-bs-toggle="modal" data-bs-target="#perfilModal"></i>
+                </div>
+                <div class="col-9 mt-4">
+                    <i class="fa-solid fa-square-pen fa-2xl" id="editar-acerca" type="button" data-bs-toggle="modal" data-bs-target="#acercaModal"></i>
+                    <h2>Acerca de mí</h2> <br>
+                    <h5>Hola, gracias por pasar a ver mi portfolio.</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="experiencia rounded">
+        <div>
+            <i class="fa-solid fa-plus fa-2xl" id="agregar-experiencia" type="button" data-bs-toggle="modal" data-bs-target="#experienciaModal"></i>
+            <h2 class="text-center mt-4">Experiencia</h2> <br>
+            <h4></h4> <br>
+        </div>
+    </section>
+
+    <section class="educacion rounded">
+        <div>
+            <i class="fa-solid fa-plus fa-2xl" id="editar-educacion" type="button" data-bs-toggle="modal" data-bs-target="#educacionModal"></i>
+            <h2 class="text-center mt-4">Educación</h2> <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="">
+                            <a href="https://www.facebook.com/EscuelaTecnicaNro1Concepcion/" target="_blank"><img src="assets/img/tecnica1.png" alt="E.T. N°1" width="75%" class="enet"></a> <br> <br>
+                            <h5>Esc. Técnica N°1</h5>
+                            <h6>Concepción - Tucumán</h6>
+                        </i>
+                        <i class="fa-solid fa-square-pen fa-2xl" id="editar" type="button" data-bs-toggle="modal" data-bs-target="#tecnicaModal"></i>
+                    </div>
+                    <div class="col-3">
+                            <i class="">
+                                <a href="https://iesconcepcion.edu.ar/index.php" target="_blank"><img src="assets/img/logoIES.png" alt="Ies Concepción" width="75%" class=""></a>
+                                <h5>Instituto de Enseñanza Superior</h5>
+                                <h6>Concepción - Tucumán</h6>
+                            </i>
+                            <i class="fa-solid fa-square-pen fa-2xl" id="editar" type="button" data-bs-toggle="modal" data-bs-target="#iesModal"></i>
+                    </div>
+                    <div class="col-3">
+                        <i class="">
+                            <a href="https://iesa-tuc.infd.edu.ar/sitio/" target="_blank"><img src="assets/img/logoIESA01.png" alt="Ies Aguilares" width="50%" class=""></a> <br>
+                            <h5>Instituto de Enseñanza Superior</h5>
+                            <h6>Aguilares - Tucumán</h6>
+                        </i>
+                        <i class="fa-solid fa-square-pen fa-2xl" id="editar" type="button" data-bs-toggle="modal" data-bs-target="#iesaModal"></i>
+                    </div>
+                    <div class="col-3">
+                        <i class="">
+                            <a href="https://www.unca.edu.ar/" target="_blank"><img src="assets/img/logounca.png" alt="Unca" width="75%" class="unca"></a> <br> <br>
+                            <h5>Universidad Nacional de Catamarca</h5>
+                            <h6>San Fernando - Tucumán</h6>
+                        </i>
+                        <i class="fa-solid fa-square-pen fa-2xl" id="editar" type="button" data-bs-toggle="modal" data-bs-target="#uncaModal"></i>
+                    </div>
+                </div>
+            </div> <br>
+        </div>
+    </section>
+
+    <section class="skills rounded">
+        <div>
+            <i class="fa-solid fa-plus fa-2xl" id="editar-skills" type="button" data-bs-toggle="modal" data-bs-target="#skillsModal"></i>
+            <h2 class="text-center mt-4">Hard & Soft Skills</h2> <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 text-center">
+                        <i class="fa-brands fa-linux fa-2xl"></i><h5>Linux</h5>
+                    </div>
+                    <div class="col-8 mt-3">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" role="progressbar" aria-label="Animated striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">50%</div>
+                        </div>
+                    </div>
+                    <div class="col-1 mt-3">
+                        <i class="fa-solid fa-square-pen fa-2xl" id="editar" type="button" data-bs-toggle="modal" data-bs-target="#linuxModal"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 text-center">
+                        <i class="fa-brands fa-html5 fa-2xl"></i><h5>Html</h5>
+                    </div>
+                    <div class="col-8 mt-3">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" role="progressbar" aria-label="Animated striped example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">30%</div>
+                        </div>
+                    </div>
+                    <div class="col-1 mt-3">
+                        <i class="fa-solid fa-square-pen fa-2xl" id="editar" type="button" data-bs-toggle="modal" data-bs-target="#htmlModal"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 text-center">
+                        <i class="fa-brands fa-css3-alt fa-2xl"></i><h5>CSS</h5>
+                    </div>
+                    <div class="col-8 mt-3">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" role="progressbar" aria-label="Animated striped example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">30%</div>
+                        </div>
+                    </div>
+                    <div class="col-1 mt-3">
+                        <i class="fa-solid fa-square-pen fa-2xl" id="editar" type="button" data-bs-toggle="modal" data-bs-target="#cssModal"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 text-center">
+                        <i class="fa-brands fa-square-js fa-2xl"></i><h5>JavaScript</h5>
+                    </div>
+                    <div class="col-8 mt-3">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" role="progressbar" aria-label="Animated striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">25%</div>
+                        </div> 
+                    </div>
+                    <div class="col-1 mt-3">
+                        <i class="fa-solid fa-square-pen fa-2xl" id="editar" type="button" data-bs-toggle="modal" data-bs-target="#jsModal"></i>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 text-center">
+                        <i class="fa-brands fa-bootstrap fa-2xl"></i><h5>Bootstrap</h5>
+                    </div>
+                    <div class="col-8 mt-3">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" role="progressbar" aria-label="Animated striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">50%</div>
+                        </div>
+                    </div>
+                    <div class="col-1 mt-3">
+                        <i class="fa-solid fa-square-pen fa-2xl" id="editar" type="button" data-bs-toggle="modal" data-bs-target="#bootstrapModal"></i>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </section>
+
+    <section class="proyectos rounded">
+        <div>
+            <i class="fa-solid fa-plus fa-2xl" id="agregar-proyectos" type="button" data-bs-toggle="modal" data-bs-target="#proyectosModal"></i>
+            <h2 class="text-center mt-4">Proyectos</h2> <br>
+            <h4></h4> <br>
+        </div>
+    </section>
+
+    <footer class="rounded">
+        JAO PORTFOLIO WEB © 2022
+    </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
